@@ -1,6 +1,28 @@
+html[data-theme='dark'] {
+    --button-text-color: #ffffff;
+    --button-background-color: #4e005c;
+    --button-border-color: #ba8fc2;
+
+    --background-color: #292929;
+    --icon-color: #ba8fc2;
+
+    ---text-color: #ffffff;
+}
+
+html[data-theme='light'] {
+    --button-text-color: #252525;
+    --button-background-color: #f9d4ff;
+    --button-border-color: #4e005c;
+
+    --background-color: #dfdfdf;
+    --icon-color: #4e005c;
+
+    ---text-color: #252525;
+}
+
 body {
-    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);
+    background-color: var(--background-color);
+    color: var(---text-color)
 }
 
 table {
@@ -10,17 +32,14 @@ table {
 
 tbody {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 tr {
     width: 100%;
+    border: 1px solid black;
 }
 
 .table td {
-    border: 1px solid #dbdbdb;
-    border-width: 0 0 1px;
     padding: 0.5em 0.75em;
     vertical-align: top;
 }

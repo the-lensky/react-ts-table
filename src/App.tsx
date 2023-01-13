@@ -1,5 +1,6 @@
 import {usersApi} from './store'
 import {Table} from './components/Table'
+import {Toolbox} from './components/Toolbox'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
     return (
         <div className="App">
+            <Toolbox/>
             <Table data={users}/>
         </div>
     )
