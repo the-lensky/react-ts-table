@@ -1,0 +1,12 @@
+.gender {
+    width: 5px;
+    height: 100%;
+}
+
+.male {
+    background-color: blue;
+}
+
+.female {
+    background-color: pink;
+}

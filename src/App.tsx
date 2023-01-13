@@ -1,21 +1,16 @@
 import {usersApi} from './store'
+import {Table} from './components/Table'
 
 function App() {
 
-    const {data = [], isLoading} = usersApi.useGetUsersQuery('')
-    const {users} = data
+    const {data, isLoading} = usersApi.useGetUsersQuery('')
+    const users = data ? data.users : []
 
     if (isLoading) return <div>Loading...</div>
 
     return (
         <div className="App">
-            {
-                users.map(user => {
-                    return (
-                        <li>{user.firstName}</li>
-                    )
-                })
-            }
+            <Table data={users}/>
         </div>
     )
 }
